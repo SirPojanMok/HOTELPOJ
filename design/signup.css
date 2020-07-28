@@ -1,0 +1,135 @@
+:root {
+    --font-recursive-style: 'Recursive', sans-serif;
+    --font-roboto-style: 'Roboto', sans-serif;
+    --font-size: 1rem;
+    --font-header-size: 1.2rem;
+    --header-position: absolute;
+    --form-margin: 25% 5% 25% 5%;
+}
+
+html {
+    font-size: 16px;
+    background: url(/img/form.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: var(--header-position);
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: orange;
+}
+
+#header-box {
+    margin: 5% 2% 5% 5%;
+}
+
+#header-box a{
+    font-family: var(--font-roboto-style);
+    font-size: var(--font-header-size);
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+form {
+    margin: 5% 5% 5% 5%;
+}
+
+#form-box {
+    margin: var(--form-margin);
+    background-color: white;
+    border: 1vh outset;
+    border-radius: 5px;
+}
+
+p {
+    font-family: var(--font-recursive-style);
+    font-size: var(--font-size);
+}
+
+.link-navigation {
+    color: gray;
+}
+
+label {
+    font-family: var(--font-recursive-style);
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.input-box {
+    font-family: var(--font-recursive-style);
+    font-size: var(--font-size);
+    
+    width: 70%;
+    padding: 2vh 2vh 2vh 2vh;
+    margin-bottom: 3vh;
+
+    border-style: none;
+    border-radius: 3px;
+
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: rgb(238, 238, 238);
+}
+
+.submit-box {
+    font-family: var(--font-recursive-style);
+    font-size: var(--font-size);
+
+    border-style: none;
+    border-radius: 3px;
+
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    background-color: rgb(238, 238, 238);
+}
+
+
+@media (min-width:480px) {
+    :root {
+        --font-size: 1.2rem;
+        --font-header-size: 1.4rem;
+        --form-margin: 25% 10% 25% 10%;
+    }
+}
+
+@media (min-width:768px) {
+    :root {
+        --font-size: 1.4rem;
+        --font-header-size: 1.6rem;
+        --form-margin: 25% 10% 25% 10%;
+    }
+}
+
+@media (min-width:992px) {
+    :root {
+        --font-size: 1.6rem;
+        --font-header-size: 1.8rem;
+        --form-margin: 25% 10% 25% 10%;
+        --header-position: fixed;
+    }
+}
+
+@media (min-width:1200px) {
+    :root {
+        --font-size: 1.8rem;
+        --font-header-size: 2rem;
+        --form-margin: 10% 30% 10% 10%;
+        --header-position: fixed;
+
+    }
+
+    #header-box {
+        margin: 2% 2% 2% 5%;
+    }
+
+}

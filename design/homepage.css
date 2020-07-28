@@ -1,0 +1,141 @@
+:root {
+    --font-header-size: 1.2rem;
+    --font-nav-size: 0.5rem;
+    --font-recursive-family: 'Recursive', sans-serif;
+    --font-roboto-family: 'Roboto', sans-serif;
+    --main-box-margin: 30% 0 30% 0;
+}
+
+html {
+    font-size: 16px;
+    background: url(/img/homepage.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: orange;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#header-box {
+    display: flex;
+    align-items: center;
+}
+
+#header-box-1 {
+    flex-basis: 35%;
+    margin: 5% 2% 5% 5%;
+    font-size: var(--font-header-size);
+}
+
+.nav-header {
+    font-family: var(--font-roboto-family);
+    color: black;
+}
+
+
+#header-box-2 {
+    display: flex;
+    flex-basis: 65%;
+
+    align-items: center;
+}
+
+
+#header-box-2 p{
+    flex-basis: 20%;
+
+    text-align: center;
+    margin: 0 2% 0 2%;
+    font-size: var(--font-nav-size);
+}
+
+
+#main-box {
+    margin: var(--main-box-margin);
+}
+
+#main-box h1{
+    color: white;
+    font-family: var(--font-recursive-family);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+#main-box h2{
+    color: white;
+    font-family: var(--font-recursive-family);
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+
+.nav-room {
+    display: block;
+    margin: 0 15% 0 15%;
+    padding: 5% 0 5% 0;
+    text-align: center;
+    background-color: rgb(223, 207, 177);
+    border-style:none;
+    border-radius: 3px;
+    font-family: var(--font-recursive-family);
+    color: black;
+}
+
+.nav-room:hover {
+    opacity: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width:480px){
+    :root {
+        --font-header-size: 1.4rem;
+        --font-nav-size: 0.7rem;
+    }
+}
+
+
+@media (min-width:768px){
+    :root {
+        --font-header-size: 1.6rem;
+        --font-nav-size: 0.9rem;
+    }
+}
+
+@media (min-width:992px){
+    :root {
+        --font-header-size: 1.8rem;
+        --font-nav-size: 1.1rem;
+    }
+}
+
+@media (min-width:1200px){
+    :root {
+        --font-header-size: 2rem;
+        --font-nav-size: 1.3rem;
+        --main-box-margin: 20% 0 20% 0;
+    }
+}

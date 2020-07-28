@@ -1,0 +1,96 @@
+:root {
+    --font-header-size: 1.2rem;
+    --font-nav-size: 0.5rem;
+    --font-recursive-family: 'Recursive', sans-serif;
+    --font-roboto-family: 'Roboto', sans-serif;
+}
+
+html {
+    font-size: 16px;
+    background: url(/img/room.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: orange;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+
+#header-box {
+    display: flex;
+    align-items: center;
+}
+
+#header-box-1 {
+    flex-basis: 35%;
+    margin: 5% 2% 5% 5%;
+    font-size: var(--font-header-size);
+}
+
+.nav-header {
+    font-family: var(--font-roboto-family);
+    color: black;
+}
+
+
+#header-box-2 {
+    display: flex;
+    flex-basis: 65%;
+
+    align-items: center;
+}
+
+
+#header-box-2 p{
+    flex-basis: 20%;
+
+    text-align: center;
+    margin: 0 2% 0 2%;
+    font-size: var(--font-nav-size);
+}
+
+#main-box {
+    margin: 35% 5% 20% 5%;
+}
+
+h1 {
+    font-size: 1.2rem;
+    font-family: var(--font-recursive-family);
+}
+
+p, li {
+    font-family: var(--font-recursive-family);
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    color: black;
+}
+
+#tempah-box {
+    margin-top: 10%;
+}
+
+.tempah-btn {
+    padding: 3% 3% 3% 3%;
+    border-style: solid;
+    border-radius: 20px;
+    color: gray;
+}
+
+.tempah-btn:hover{
+    opacity: 80%;
+}

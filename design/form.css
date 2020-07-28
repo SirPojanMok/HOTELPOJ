@@ -1,0 +1,176 @@
+:root {
+    --font-header-size: 1.2rem;
+    --font-nav-size: 0.5rem;
+    --font-size:1rem;
+    --font-recursive-family: 'Recursive', sans-serif;
+    --font-roboto-family: 'Roboto', sans-serif;
+    --form-box-margin: 30% 10% 30% 5%;
+}
+
+html {
+    font-size: 16px;
+    background: url(/img/form.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    scroll-behavior: smooth;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: orange;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+#header-box {
+    display: flex;
+    align-items: center;
+}
+
+#header-box-1 {
+    flex-basis: 35%;
+    margin: 5% 2% 5% 5%;
+    font-size: var(--font-header-size);
+}
+
+.nav-header {
+    font-family: var(--font-roboto-family);
+    color: black;
+}
+
+
+#header-box-2 {
+    display: flex;
+    flex-basis: 65%;
+
+    align-items: center;
+
+}
+
+
+#header-box-2 p{
+    flex-basis: 20%;
+
+    text-align: center;
+    margin: 0 2% 0 2%;
+    font-size: var(--font-nav-size);
+}
+
+#form-box {
+    margin: var(--form-box-margin);
+    background-color: white;
+    border: 1vh outset;
+    border-radius: 5px;
+}
+
+form {
+    margin: 5% 5% 5% 5%;
+}
+
+h2 {
+    font-family: var(--font-recursive-family);
+    font-size: var(--font-size);
+}
+
+label {
+    font-family: var(--font-recursive-family);
+    font-size: var(--font-size);
+    font-weight: bold;
+}
+
+.input-box {
+    font-family: var(--font-recursive-family);
+    font-size: var(--font-size);
+    
+    width: 85%;
+    padding: 2vh 2vh 2vh 2vh;
+    margin-bottom: 3vh;
+
+    border-style: none;
+    border-radius: 3px;
+
+    text-decoration: none;
+    box-sizing: border-box;
+    background-color: rgb(238, 238, 238);
+}
+
+.box-tempahan-btn {
+    display: flex;
+}
+.box-tempahan-btn input{
+    margin-left: 1rem;
+}
+
+.nav-btn {
+    color: gray;
+    font-family: var(--font-recursive-family);
+    font-size: var(--font-size);
+
+    border-style: none;
+    border-radius: 3px;
+
+    padding: 1.5% 1.5% 1.5% 1.5%;
+    background-color: rgb(238, 238, 238);
+}
+
+@media (min-width:480px){
+    :root {
+        --font-header-size: 1.4rem;
+        --font-nav-size: 0.7rem;
+        --font-size: 1.2rem;
+        --form-box-margin: 30% 10% 20% 5%;
+    }
+}
+
+
+@media (min-width:768px){
+    :root {
+        --font-header-size: 1.6rem;
+        --font-nav-size: 0.9rem;
+        --font-size: 1.4rem;
+        --form-box-margin: 20% 10% 20% 5%;
+    }
+}
+
+@media (min-width:992px){
+    :root {
+        --font-header-size: 1.8rem;
+        --font-nav-size: 1.1rem;
+        --font-size: 1.6rem;
+        --form-box-margin: 20% 30% 20% 5%;
+    }
+}
+
+@media (min-width:1200px){
+    :root {
+        --font-header-size: 2rem;
+        --font-nav-size: 1.3rem;
+        --font-size: 1.8rem;
+        --form-box-margin: 20% 40% 20% 5%;
+    }
+}
+
+@media print {
+    :root {
+        --font-size: 0.8rem;
+    }
+    header {
+        display: none;
+    }
+
+    #form-box {
+        margin: 0 10% 0 10%;
+    }
+
+    .box-tempahan-btn {
+        display: none
+    }
+}
