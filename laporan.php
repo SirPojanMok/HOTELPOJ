@@ -1,4 +1,5 @@
-<?php 
+<?php
+    error_reporting(E_ERROR);
     session_start();
     
     if(!isset($_SESSION['nama_pengguna'])){
@@ -34,6 +35,8 @@
 
     $sql_2 = "SELECT * FROM menempah WHERE kad_pengenalan ='$kad_pengenalan_penempah'";
     $result_2 = mysqli_query($con, $sql_2);
+
+
     while ($row_2 = mysqli_fetch_array($result_2)) {
         $id_bilik_penempah = $row_2['id_bilik'];
         $jumlah_tempahan_penempah = $row_2['jumlah_tempahan'];
