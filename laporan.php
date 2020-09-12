@@ -1,15 +1,19 @@
 <?php
+    // Untuk mengesan ralat
     error_reporting(E_ERROR);
+
+    // Jika bukan pengguna, pergi ke login
     session_start();
     
     if(!isset($_SESSION['nama_pengguna'])){
         header("Location:login-form.php");
     }
-    // Account's
+
+    // Data pengguna
     $nama_pengguna = $_SESSION['nama_pengguna'];
     $email_pengguna = $_SESSION['email_pengguna'];
     
-    // Connecting database and selecting table
+    // Menghubung ke database
     $con = mysqli_connect("localhost", "root", "");
     
     if (!$con) {
@@ -18,6 +22,7 @@
     
     mysqli_select_db($con, 'hotelpoj');
 
+    // Query untuk mendapatkan data pengguna
     $sql = "SELECT kad_pengenalan FROM pelanggan WHERE email='$email_pengguna'";
 
     $result = mysqli_query($con, $sql);
@@ -51,12 +56,13 @@
     while ($row_3 = mysqli_fetch_array($result_3)) {
         $jumlah_bayaran_penempah = $row_3['harga_bilik'];
     }
-
+    
     $start = date_create($tarikh_masuk_penempah);
     $end = date_create($tarikh_keluar_penempah);    
     $jumlah_hari = date_diff($start, $end);
     $jumlah_hari = $jumlah_hari -> format('%a');
 
+    // Proses untuk mendapatkan harga tempahan
     if ($jumlah_bayaran_penempah / $jumlah_tempahan_penempah / $jumlah_hari == 99){
         $jenis_bilik = 'Single Room';
     } elseif ($jumlah_bayaran_penempah / $jumlah_tempahan_penempah / $jumlah_hari == 190) {
